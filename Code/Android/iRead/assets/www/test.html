@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>IRead</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="description" content="">
+<meta name="author" content="guan">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet"
+	href="css/themes/default/jquery.mobile-1.4.5.min.css">
+
+</head>
+<body>
+	<div data-role="page" id="login">
+		<div data-role="header" data-theme="b">
+			<h1 style="text-align: left; margin-left: 10px;">IRead</h1>
+		</div>
+		<div data-role="content">
+			<input type="text" class="email" placeholder="邮箱..."> <input
+				type="password" class="password" placeholder="密码..."> <input
+				type="submit" class="login" data-inline="true" value="登录">
+			&nbsp;&nbsp; <a href="#register" data-inline="true"
+				data-transition="slide">注册</a>
+		</div>
+		<div data-role="footer" data-theme="b" data-position="fixed">
+			<h1>&copy; Copyright by IRead team</h1>
+		</div>
+	</div>
+
+	<div data-role="page" id="register">
+		<div data-role="header" data-theme="b">
+			<h1 style="text-align: left; margin-left: 10px;">IRead</h1>
+		</div>
+		<div data-role="content">
+			<input type="text" class="nickname" placeholder="昵称..."> <input
+				type="text" class="register_email" placeholder="邮箱..."> <input
+				type="password" class="register_password" placeholder="密码...">
+			<input type="submit" class="register" data-inline="true" value="注册">&nbsp;&nbsp;
+			<a href="#login" data-inline="true" data-transition="slide"
+				data-direction="reverse">返回</a>
+		</div>
+		<div data-role="footer" data-theme="b" data-position="fixed">
+			<h1>&copy; Copyright by IRead team</h1>
+		</div>
+	</div>
+
+	<div data-role="page" id="ireads">
+		<div data-role="header" data-theme="b" data-position="fixed">
+			<h1 style="text-align: left; margin-left: 10px;">IRead</h1>
+			<a href="#ireads" data-icon="refresh" class="ui-btn-right">Refresh</a>
+		</div>
+		<div data-role="content">
+			<ul data-role="listview" id="readul">
+
+			</ul>
+		</div>
+
+		<div data-role="footer" data-theme="a" data-position="fixed">
+			<div data-role="navbar" style="color: #E6E8FA">
+				<ul>
+					<li><a href="#ireads" data-icon="comment"><span
+							style="font-size: 10px; color: #959595">IReads</span></a></li>
+					<li><a href="#keywords" data-icon="tag"><span
+							style="font-size: 10px; color: #959595">KeyWords</span></a></li>
+					<li><a href="#search" data-icon="search"><span
+							style="font-size: 10px; color: #959595">Search</span></a></li>
+					<li><a href="#me" data-icon="user"><span
+							style="font-size: 10px; color: #959595">Me</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<div data-role="page" id="keywords">
+		<div data-role="header" data-theme="b">
+			<h1 style="text-align: left; margin-left: 10px;">Keywords</h1>
+			<a href="#new" data-icon="plus" class="ui-btn-right"
+				data-transition="slide"></a>
+		</div>
+		<div data-role="content">
+			<ul data-role="listview" id="kwul">
+
+			</ul>
+		</div>
+		<div data-role="footer" data-theme="a" data-position="fixed">
+			<div data-role="navbar" style="color: #E6E8FA">
+				<ul>
+					<li><a href="#ireads" data-icon="comment"><span
+							style="font-size: 10px; color: #959595">IReads</span></a></li>
+					<li><a href="#keywords" data-icon="tag"><span
+							style="font-size: 10px; color: #959595">KeyWords</span></a></li>
+					<li><a href="#search" data-icon="search"><span
+							style="font-size: 10px; color: #959595">Search</span></a></li>
+					<li><a href="#me" data-icon="user"><span
+							style="font-size: 10px; color: #959595">Me</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<div data-role="page" id="new">
+		<div data-role="header" data-theme="b">
+			<h1>Add A Keyword</h1>
+			<a href="#keywords" data-icon="arrow-l" class="ui-btn-left"
+				data-transition="slide" data-direction="reverse"></a>
+		</div>
+		<div data-role="content">
+			<input type="text" name="fname" id="fname" class="newkeyword"
+				placeholder="添加关键字..."> <input type="submit"
+				data-inline="true" class="newsubmit" value="提交">
+		</div>
+		<div data-role="footer" data-theme="a" data-position="fixed">
+			<div data-role="navbar" style="color: #E6E8FA">
+				<ul>
+					<li><a href="#ireads" data-icon="comment"><span
+							style="font-size: 10px; color: #959595">IReads</span></a></li>
+					<li><a href="#keywords" data-icon="tag"><span
+							style="font-size: 10px; color: #959595">KeyWords</span></a></li>
+					<li><a href="#search" data-icon="search"><span
+							style="font-size: 10px; color: #959595">Search</span></a></li>
+					<li><a href="#me" data-icon="user"><span
+							style="font-size: 10px; color: #959595">Me</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div data-role="page" id="me">
+		<div data-role="header" data-theme="b">
+			<h1>ME</h1>
+		</div>
+		<div data-role="content">
+			<ul data-role="listview" id="meul">
+				
+			</ul>
+		</div>
+		<div data-role="footer" data-theme="a" data-position="fixed">
+			<div data-role="navbar" style="color: #E6E8FA">
+				<ul>
+					<li><a href="#ireads" data-icon="comment"><span
+							style="font-size: 10px; color: #959595">IReads</span></a></li>
+					<li><a href="#keywords" data-icon="tag"><span
+							style="font-size: 10px; color: #959595">KeyWords</span></a></li>
+					<li><a href="#search" data-icon="search"><span
+							style="font-size: 10px; color: #959595">Search</span></a></li>
+					<li><a href="#me" data-icon="user"><span
+							style="font-size: 10px; color: #959595">Me</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div data-role="page" id="search">
+		<div data-role="header" data-theme="b">
+			<h1>Search</h1>
+		</div>
+		<div data-role="content">
+			<ul data-role="listview" data-filter="true" data-filter-placeholder="搜索"></ul>
+		</div>
+		<div data-role="footer" data-theme="a" data-position="fixed">
+			<div data-role="navbar" style="color: #E6E8FA">
+				<ul>
+					<li><a href="#ireads" data-icon="comment"><span
+							style="font-size: 10px; color: #959595">IReads</span></a></li>
+					<li><a href="#keywords" data-icon="tag"><span
+							style="font-size: 10px; color: #959595">KeyWords</span></a></li>
+					<li><a href="#search" data-icon="search"><span
+							style="font-size: 10px; color: #959595">Search</span></a></li>
+					<li><a href="#me" data-icon="user"><span
+							style="font-size: 10px; color: #959595">Me</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+# coding=utf-8
+'''
+Created on Jul 28, 2012
+
+@author: chain
+'''
+DATABASE = {
+    'PORT': 3306,
+    'HOST': '127.0.0.1', 
+    'USER': 'root', 
+    'PWD': '123',
+    'DB': 'iRead'
+}
+
+DOMAIN = "127.0.0.1:5011"

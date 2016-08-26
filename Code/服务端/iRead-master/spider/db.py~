@@ -1,0 +1,18 @@
+# coding=utf-8
+'''
+Created on 2014-12-19
+
+@author: guan
+'''
+import core.db as db
+
+def get_all_key_word():
+    data = None
+    try:
+        conn=db.DB()
+        sql = "select * from key_word"
+        data = conn.read(sql)
+        return data
+    except Exception, e:
+        print e
+        return data

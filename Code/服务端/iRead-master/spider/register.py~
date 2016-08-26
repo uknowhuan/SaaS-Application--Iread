@@ -1,0 +1,14 @@
+# coding=utf-8
+'''
+Created on 2014-12-19
+
+@author: guan
+'''
+import core.db as db
+import json
+import random
+import time
+import uuid
+
+def test():
+    return 'test'
